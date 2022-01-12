@@ -34,7 +34,7 @@ const Header =({title,subtitle})=>{
         <section className="section has-text-centered content">
                 <Title title={title}/>
                 <Subtitle subtitle={subtitle}/>
-                <Button value={'open'}
+                <Button value={'change'}
                         type={style}
                         disabled={disabled}
                         onClick={()=>{
