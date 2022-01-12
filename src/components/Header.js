@@ -1,7 +1,8 @@
 import Button from "./Button";
+import Title from "./Title";
+import Subtitle from "./Subtitle";
 import {useState,useEffect} from "react";
 
-import {isDisabled} from "@testing-library/user-event/dist/utils";
 
 const Header =({title,subtitle})=>{
     const [style, setStyle]=useState("is-primary")
@@ -30,14 +31,9 @@ const Header =({title,subtitle})=>{
          setStyle(color)
     }
     return(
-        <section className="section">
-            <div className="container">
-                <p className="title">
-                    {title}
-                </p>
-                <p className="subtitle">
-                    {subtitle}
-                </p>
+        <section className="section has-text-centered content">
+                <Title title={title}/>
+                <Subtitle subtitle={subtitle}/>
                 <Button value={'open'}
                         type={style}
                         disabled={disabled}
@@ -46,7 +42,6 @@ const Header =({title,subtitle})=>{
                                 changeColor()
                             }
                         }}/>
-            </div>
         </section>
     )
 }
