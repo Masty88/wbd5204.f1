@@ -5,7 +5,7 @@ function App() {
   return (
       <>
           <Header title="WBD5204.F1" subtitle="React"/>
-          <Section title='My modal'/>
+          <Section title='My modal' content="My modal"/>
       </>
   );
 }
